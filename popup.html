@@ -9,29 +9,36 @@
     <script src="jquery-3.4.1.min.js"></script>
     <script src="popup.js"></script>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container ">
-        <div class="p-6 bg-gray-400 m-6">
+    <div class=" bg-blue-200 ">
+        <div class="p-6">
             <h1 class="text-3xl text-white font-bold">Ingenuity</h1>
             <div class="bg-white p-4 my-4 rounded-xl">
                 <h1 class="text-3xl font-bold">Test Alignment</h1>
                 <div class="p-4 flex flex-wrap">
-                    <div class="flex-auto my-1 xl:my-2 lg:my-2 ">
+                    <div class="flex-auto my-1 xl:my-2 lg:my-2">
                         <button id="toleft" class="func-btn">
+                            <i class="uil uil-align-left-justify text-2xl"></i>
+                            <br>
                             Left
                         </button>
                     </div>
-                    <div class="flex-auto my-1 my-1 xl:my-2 lg:my-2 ">
+                    <div class=" flex-auto my-1 my-1 xl:my-2 lg:my-2 ">
                         <button id="tocenter" class="func-btn">
+                            <i class="uil uil-align-center-justify text-2xl"></i>
+                            <br>
                             Center
                         </button>
                     </div>
                     <div class="flex-auto my-1 xl:my-2 lg:my-2 ">
                         <button id="toright" class="func-btn">
+                            <i class="uil uil-align-right-justify text-2xl"></i>
+                            <br>
                             Right
                         </button>
                     </div>
@@ -43,175 +50,185 @@
                 <div class="p-4 bg-white rounded-xl ">
                     <div class=" flex flex-wrap pb-4">
                         <div class="flex-auto my-1 xl:my-2 lg:my-2">
-                            <button id="monochrome" class=" func-btn">
+                            <button id="monochrome" class="func-btn">
+                                <i class="uil uil-circle text-2xl"></i>
+                                <br>
                                 Monochrome
                             </button>
                         </div>
                         <div class="flex-auto my-1 xl:my-2 lg:my-2">
                             <button id="invert" class="func-btn">
+                                <i class="uil uil-moon text-2xl"></i>
+                                <br>
                                 Invert
                             </button>
                         </div>
                         <div class="flex-auto my-1 xl:my-2 lg:my-2">
                             <button id="highcontrast" class=" func-btn">
+                                <i class="uil uil-adjust-half text-2xl"></i>
+                                <br>
                                 High Contrast
                             </button>
                         </div>
                         <div class="flex-auto my-1 xl:my-2 lg:my-2">
                             <button id="lowcontrast" class=" func-btn">
+                                <i class="uil uil-adjust-alt text-2xl"></i>
+                                <br>
                                 Low Contrast
                             </button>
                         </div>
                     </div>
-                    <div class="p-2 m-2 bg-gray-200 rounded-xl">
-                        <h1 class="font-bold text-center">Text Colour</h1>
-                        <div class="flex flex-wrap justify-center">
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-                                <button style=" background-color:red; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortext-red">
+                    <center>
+                        <div class="p-2 m-2 bg-blue-100 rounded-xl">
+                            <h1 class="font-bold text-center">Text Colour</h1>
+                            <div class="flex flex-wrap justify-center">
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style=" background-color:red; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortext-red">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-                                <button style="background-color:yellow; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortext-yellow">
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style="background-color:yellow; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortext-yellow">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
 
-                                <button style="background-color:white; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortext-white">
+                                    <button style="background-color:white; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortext-white">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
 
-                                <button style="background-color:blue; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortext-blue">
+                                    <button style="background-color:blue; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortext-blue">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
 
-                                <button style="background-color:green; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortext-green">
+                                    <button style="background-color:green; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortext-green">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-                                <button style="background-color:teal; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortext-teal">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style="background-color:teal; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortext-teal">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
 
-                                <button style="background-color:black; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortext-black">
+                                    <button style="background-color:black; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortext-black">
 
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-2 m-2 bg-gray-200 rounded-xl">
-                        <h1 class=" font-bold text-center">Title Colour</h1>
-                        <div class="flex flex-wrap justify-center">
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-                                <button style=" background-color:red; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortitle-red">
-
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-                                <button style="background-color:yellow; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortitle-yellow">
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-
-                                <button style="background-color:white; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortitle-white">
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-
-                                <button style="background-color:blue; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortitle-blue">
-
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-
-                                <button style="background-color:green; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortitle-green">
-
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-                                <button style="background-color:teal; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortitle-teal">
-
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-
-                                <button style="background-color:black; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colortitle-black">
-
-                                </button>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-2 bg-gray-200 rounded-xl ">
-                        <h1 class="font-bold text-center">Background Colour</h1>
-                        <div class="flex flex-wrap justify-center">
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-                                <button style=" background-color:red; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colorbg-red">
+                        <div class="p-2 m-2 bg-blue-100 rounded-xl">
+                            <h1 class=" font-bold text-center">Title Colour</h1>
+                            <div class="flex flex-wrap justify-center">
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style=" background-color:red; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortitle-red">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-                                <button style="background-color:yellow; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colorbg-yellow">
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style="background-color:yellow; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortitle-yellow">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
 
-                                <button style="background-color:white; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colorbg-white">
+                                    <button style="background-color:white; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortitle-white">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style="background-color:blue; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortitle-blue">
 
-                                <button style="background-color:blue; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colorbg-blue">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style="background-color:green; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortitle-green">
 
-                                <button style="background-color:green; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colorbg-green">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style="background-color:teal; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortitle-teal">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
-                                <button style="background-color:teal; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colorbg-teal">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
 
-                                </button>
-                            </div>
-                            <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style="background-color:black; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colortitle-black">
 
-                                <button style="background-color:black; width:18px; height:18px; border-radius:25%;"
-                                    class="colorswitch" id="colorbg-black">
-
-                                </button>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="p-2 bg-blue-100 rounded-xl ">
+                            <h1 class="font-bold text-center">Background Colour</h1>
+                            <div class="flex flex-wrap justify-center">
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style=" background-color:red; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colorbg-red">
+
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style="background-color:yellow; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colorbg-yellow">
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+
+                                    <button style="background-color:white; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colorbg-white">
+
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+
+                                    <button style="background-color:blue; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colorbg-blue">
+
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+
+                                    <button style="background-color:green; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colorbg-green">
+
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+                                    <button style="background-color:teal; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colorbg-teal">
+
+                                    </button>
+                                </div>
+                                <div class="flex-initial px-1 my-1 xl:my-2 lg:my-2">
+
+                                    <button style="background-color:black; width:18px; height:18px; border-radius:25%;"
+                                        class="colorswitch" id="colorbg-black">
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
                 </div>
             </div>
 
