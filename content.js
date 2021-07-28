@@ -14,6 +14,9 @@ function hideimg() {
         }
     }
 }
+function reset(){
+location.reload();
+}
 
 
 function tocenter() {
