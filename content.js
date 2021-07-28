@@ -34,11 +34,11 @@ function hideimg() {
     }
 
     var btn = document.getElementsByTagName("button");
-    btn-list = [btn]
+    btn_list = [btn];
     for (i = 0; i < all.length; i++) {
         for (j = 0; j < all[i].length; j++) {
-            btn-list[i][j].style["align-items"] = 'center';
-            btn-list[i][j].style["justify-content"] = 'center';
+            btn_ist[i][j].style["align-items"] = 'center';
+            btn_list[i][j].style["justify-content"] = 'center';
         }
     }
 }
