@@ -11,7 +11,6 @@ function hideimg() {
                 alll[i][j].style.display = "none";
             }
         }
-
     }
     console.log("function working");
 }
@@ -27,7 +26,7 @@ function tocenter() {
     var he4 = document.body.getElementsByTagName("h4");
     var he5 = document.body.getElementsByTagName("h5");
     var he6 = document.body.getElementsByTagName("h6");
-    all = [para, he1, he2, he3, img, he4, he5, he6, list, olo, lis, sp];
+    all = [para, he1, he2, he3, he4, he5, he6, list, olo, lis, sp];
     for (i = 0; i < all.length; i++) {
         for (j = 0; j < all[i].length; j++) {
             all[i][j].style["text-align"] = 'center';
@@ -53,7 +52,6 @@ function toright() {
         for (j = 0; j < all[i].length; j++) {
             all[i][j].style["text-align"] = 'right';
         }
-
     }
 
 }
