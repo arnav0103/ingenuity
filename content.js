@@ -14,8 +14,8 @@ function hideimg() {
         }
     }
 }
-function reset(){
-location.reload();
+function reset() {
+    location.reload();
 }
 
 
@@ -118,7 +118,7 @@ function colourbg(a) {
     document.body.style.backgroundColor = a;
 
 }
-var filter = true;
+var filter = false;
 function monochrome() {
     if (filter === true) {
         document.body.style.filter = null;
@@ -282,5 +282,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     }
     if (request.todo == "hideimg") {
         hideimg();
+    }
+    if (request.todo == "reset") {
+        reset();
     }
 });
