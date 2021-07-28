@@ -2,7 +2,8 @@ chrome.runtime.sendMessage({ todo: "showPageAction" });
 
 function hideimg() {
     var img = document.getElementsByTagName("img");
-    alll = [img]
+    var iframe = document.getElementsByTagName("iframe");
+    alll = [img, iframe]
     for (i = 0; i < alll.length; i++) {
         for (j = 0; j < alll[i].length; j++) {
             if (alll[i][j].style.display === "none") {
@@ -12,8 +13,37 @@ function hideimg() {
             }
         }
     }
-    console.log("function working");
+
+    var para = document.body.getElementsByTagName("p");
+    var list = document.body.getElementsByTagName("ul");
+    var olo = document.body.getElementsByTagName("ol");
+    var lis = document.body.getElementsByTagName("li");
+    var sp = document.body.getElementsByTagName("span");
+    var he1 = document.body.getElementsByTagName("h1");
+    var he2 = document.body.getElementsByTagName("h2");
+    var he3 = document.body.getElementsByTagName("h3");
+    var he4 = document.body.getElementsByTagName("h4");
+    var he5 = document.body.getElementsByTagName("h5");
+    var he6 = document.body.getElementsByTagName("h6");
+    all = [para, he1, he2, he3, he4, he5, he6, list, olo, lis, sp];
+    for (i = 0; i < all.length; i++) {
+        for (j = 0; j < all[i].length; j++) {
+            all[i][j].style["text-align"] = 'center';
+        }
+
+    }
+
+    var btn = document.getElementsByTagName("button");
+    btn-list = [btn]
+    for (i = 0; i < all.length; i++) {
+        for (j = 0; j < all[i].length; j++) {
+            btn-list[i][j].style["align-items"] = 'center';
+            btn-list[i][j].style["justify-content"] = 'center';
+        }
+    }
 }
+
+
 function tocenter() {
     var para = document.body.getElementsByTagName("p");
     var list = document.body.getElementsByTagName("ul");
