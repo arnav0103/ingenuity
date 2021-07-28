@@ -1,5 +1,70 @@
 chrome.runtime.sendMessage({ todo: "showPageAction" });
+var bol_d = false
+function bold() {
+    var para = document.body.getElementsByTagName("p");
+    var list = document.body.getElementsByTagName("ul");
+    var olo = document.body.getElementsByTagName("ol");
+    var lis = document.body.getElementsByTagName("li");
+    var sp = document.body.getElementsByTagName("span");
+    var he1 = document.body.getElementsByTagName("h1");
+    var he2 = document.body.getElementsByTagName("h2");
+    var he3 = document.body.getElementsByTagName("h3");
+    var he4 = document.body.getElementsByTagName("h4");
+    var he5 = document.body.getElementsByTagName("h5");
+    var he6 = document.body.getElementsByTagName("h6");
+    all = [para, he1, he2, he3, he4, he5, he6, list, olo, lis, sp];
+    if (bol_d === false) {
+    for (i = 0; i < all.length; i++) {
+        for (j = 0; j < all[i].length; j++) {
+            all[i][j].style["font-weight"] = 'bold';
+        }
 
+    }
+     bol_d = true
+}else{
+    for (i = 0; i < all.length; i++) {
+        for (j = 0; j < all[i].length; j++) {
+            all[i][j].style["font-weight"] = null;
+        }
+
+    }
+bol_d = false
+}
+
+}
+var italic_s = false
+function italic() {
+    var para = document.body.getElementsByTagName("p");
+    var list = document.body.getElementsByTagName("ul");
+    var olo = document.body.getElementsByTagName("ol");
+    var lis = document.body.getElementsByTagName("li");
+    var sp = document.body.getElementsByTagName("span");
+    var he1 = document.body.getElementsByTagName("h1");
+    var he2 = document.body.getElementsByTagName("h2");
+    var he3 = document.body.getElementsByTagName("h3");
+    var he4 = document.body.getElementsByTagName("h4");
+    var he5 = document.body.getElementsByTagName("h5");
+    var he6 = document.body.getElementsByTagName("h6");
+    all = [para, he1, he2, he3, he4, he5, he6, list, olo, lis, sp];
+    if (italic_s === false) {
+    for (i = 0; i < all.length; i++) {
+        for (j = 0; j < all[i].length; j++) {
+            all[i][j].style["font-style"] = 'italic';
+        }
+
+    }
+     italic_s = true
+}else{
+    for (i = 0; i < all.length; i++) {
+        for (j = 0; j < all[i].length; j++) {
+            all[i][j].style["font-style"] = null;
+        }
+
+    }
+italic_s = false
+}
+
+}
 function hideimg() {
     var img = document.getElementsByTagName("img");
     var iframe = document.getElementsByTagName("iframe");
@@ -129,32 +194,35 @@ function monochrome() {
     }
 
 }
+var invert = false;
 function invert() {
-    if (filter === true) {
+    if (invert === true) {
         document.body.style.filter = null;
-        filter = false
+        invert = false
     } else {
         document.body.style.filter = "invert(100%)";
-        filter = true
+        invert = true
     }
 
 }
+var high = false;
 function highcontrast() {
-    if (filter === true) {
+    if (high === true) {
         document.body.style.filter = null;
-        filter = false
+        high = false
     } else {
         document.body.style.filter = "contrast(1.75)";
-        filter = true
+        high = true
     }
 }
+var low = false;
 function lowcontrast() {
-    if (filter === true) {
+    if (low === true) {
         document.body.style.filter = null;
-        filter = false
+        low = false
     } else {
         document.body.style.filter = "contrast(50%)";
-        filter = true
+        low = true
         console.log("Yes working")
     }
 }
