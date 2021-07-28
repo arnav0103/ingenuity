@@ -1,7 +1,9 @@
 chrome.runtime.sendMessage({ todo: "showPageAction" });
 
-function tts() {
-  chrome.tts.speak('Hello, world.');
+function hideimg() {
+    var img = document.getElementsById("myid");
+    img.style["display"] = "none";
+    console.log("function working");
 }
 
 function tocenter() {
@@ -268,7 +270,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.todo == "colorbg-black") {
         colourbg('black');
     }
-    if (request.todo== "tts"){
-      tts();
+    if (request.todo == "hideimg"){
+      console.log("btn working");
+      hideimg();
+
     }
 });

@@ -33,6 +33,8 @@
     ],
     "permissions": [
         "tts",
+        "activeTab",
+        "clipboardRead",
         "tabs"
     ]
 }
