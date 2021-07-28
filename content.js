@@ -1,5 +1,9 @@
 chrome.runtime.sendMessage({ todo: "showPageAction" });
 
+function tts() {
+  chrome.tts.speak('Hello, world.');
+}
+
 function tocenter() {
     var para = document.body.getElementsByTagName("p");
     var list = document.body.getElementsByTagName("ul");
@@ -263,5 +267,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     }
     if (request.todo == "colorbg-black") {
         colourbg('black');
+    }
+    if (request.todo== "tts"){
+      tts();
     }
 });
