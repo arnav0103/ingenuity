@@ -14,22 +14,22 @@ function bold() {
     var he6 = document.body.getElementsByTagName("h6");
     all = [para, he1, he2, he3, he4, he5, he6, list, olo, lis, sp];
     if (bol_d === false) {
-    for (i = 0; i < all.length; i++) {
-        for (j = 0; j < all[i].length; j++) {
-            all[i][j].style["font-weight"] = 'bold';
-        }
+        for (i = 0; i < all.length; i++) {
+            for (j = 0; j < all[i].length; j++) {
+                all[i][j].style["font-weight"] = 'bold';
+            }
 
-    }
-     bol_d = true
-}else{
-    for (i = 0; i < all.length; i++) {
-        for (j = 0; j < all[i].length; j++) {
-            all[i][j].style["font-weight"] = null;
         }
+        bol_d = true
+    } else {
+        for (i = 0; i < all.length; i++) {
+            for (j = 0; j < all[i].length; j++) {
+                all[i][j].style["font-weight"] = null;
+            }
 
+        }
+        bol_d = false
     }
-bol_d = false
-}
 
 }
 var italic_s = false
@@ -47,22 +47,22 @@ function italic() {
     var he6 = document.body.getElementsByTagName("h6");
     all = [para, he1, he2, he3, he4, he5, he6, list, olo, lis, sp];
     if (italic_s === false) {
-    for (i = 0; i < all.length; i++) {
-        for (j = 0; j < all[i].length; j++) {
-            all[i][j].style["font-style"] = 'italic';
-        }
+        for (i = 0; i < all.length; i++) {
+            for (j = 0; j < all[i].length; j++) {
+                all[i][j].style["font-style"] = 'italic';
+            }
 
-    }
-     italic_s = true
-}else{
-    for (i = 0; i < all.length; i++) {
-        for (j = 0; j < all[i].length; j++) {
-            all[i][j].style["font-style"] = null;
         }
+        italic_s = true
+    } else {
+        for (i = 0; i < all.length; i++) {
+            for (j = 0; j < all[i].length; j++) {
+                all[i][j].style["font-style"] = null;
+            }
 
+        }
+        italic_s = false
     }
-italic_s = false
-}
 
 }
 function hideimg() {
@@ -350,6 +350,12 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     }
     if (request.todo == "hideimg") {
         hideimg();
+    }
+    if (request.todo == "bold") {
+        bold();
+    }
+    if (request.todo == "italic") {
+        italic();
     }
     if (request.todo == "reset") {
         reset();

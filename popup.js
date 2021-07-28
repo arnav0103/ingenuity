@@ -3,6 +3,17 @@ $(function () {
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
             chrome.tabs.sendMessage(tabs[0].id, { todo: "reset" });
         });
+    });
+    $('#bold').click(function () {
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, { todo: "bold" });
+        });
+
+    });
+    $('#italic').click(function () {
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, { todo: "italic" });
+        });
 
     });
     $('#hideimg').click(function () {
