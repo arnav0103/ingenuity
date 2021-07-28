@@ -1,11 +1,20 @@
 chrome.runtime.sendMessage({ todo: "showPageAction" });
 
 function hideimg() {
-    var img = document.getElementsById("myid");
-    img.style["display"] = "none";
+    var img = document.getElementsByTagName("img");
+    alll = [img]
+    for (i = 0; i < alll.length; i++) {
+        for (j = 0; j < alll[i].length; j++) {
+            if (alll[i][j].style.display === "none") {
+                alll[i][j].style.display = "block";
+            } else {
+                alll[i][j].style.display = "none";
+            }
+        }
+
+    }
     console.log("function working");
 }
-
 function tocenter() {
     var para = document.body.getElementsByTagName("p");
     var list = document.body.getElementsByTagName("ul");
@@ -18,7 +27,7 @@ function tocenter() {
     var he4 = document.body.getElementsByTagName("h4");
     var he5 = document.body.getElementsByTagName("h5");
     var he6 = document.body.getElementsByTagName("h6");
-    all = [para, he1, he2, he3, he4, he5, he6, list, olo, lis, sp];
+    all = [para, he1, he2, he3, img, he4, he5, he6, list, olo, lis, sp];
     for (i = 0; i < all.length; i++) {
         for (j = 0; j < all[i].length; j++) {
             all[i][j].style["text-align"] = 'center';
@@ -182,7 +191,6 @@ function textToAudio() {
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.todo == "alignmentcenter") {
-        // var addColor = '#' + request.clickedColor;
         tocenter();
     }
     if (request.todo == "alignmentleft") {
@@ -192,7 +200,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         toright();
     }
     if (request.todo == "monochrome") {
-        // var addColor = '#' + request.clickedColor;
         monochrome();
     }
     if (request.todo == "highcontrast") {
@@ -270,9 +277,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.todo == "colorbg-black") {
         colourbg('black');
     }
-    if (request.todo == "hideimg"){
-      console.log("btn working");
-      hideimg();
-
+    if (request.todo == "hideimg") {
+        hideimg();
     }
 });
