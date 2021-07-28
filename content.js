@@ -195,7 +195,7 @@ function monochrome() {
 
 }
 var invert = false;
-function invert() {
+function invertf() {
     if (invert === true) {
         document.body.style.filter = null;
         invert = false
@@ -280,7 +280,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         lowcontrast();
     }
     if (request.todo == "invert") {
-        invert();
+        invertf();
     }
     if (request.todo == "colortext-red") {
         colourtext('red');
